@@ -1,0 +1,45 @@
+	Cube - Small demo that displays a rotating cube
+
+
+
+  Copyright (C) 2007 Jaap Versteegh
+
+  cube is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+** Cube **
+
+This is a demo program for the HP 49G+ and HP 50G calculators. These calculators 
+are ARM based and emulate the saturn processor used in ealier HP calculator 
+models. However, one can run software on the ARM processor directly using a 
+special library. A big advantage of this is that the gcc arm compiler can be used
+to develop programs. hpgcc (http://hpgcc.org) provides libraries specific for the
+HP calculators and a tool to convert binaries that are compiled by the gcc arm-elf 
+compiler (included with hpgcc) into 'program strings' that can be executed using
+a special library called ARMTools (also included with hpgcc).
+So you will need to download and install hpgcc to compile this software, install 
+the ARMTools library on your calculator. Compilation with 'make' will produce the
+file "cube.hp". When uploaded to the calculator, it can be executed usign the 
+"PrRUN" command in the ARMTools library.
+
+The program shows a spinning cube. The spin axis can be adjusted using the arrow
+keys and the spin speed with "+" an "-". "x" and "/" bring the camera closer or 
+further away from the cube. Bring the camera too close and the program will crash. 
+Probably due to drawing outside the screen buffer. The lines aren't 'capped' when 
+running outside the screen and I'm not sure whether the ggl library takes care of 
+this.
+
+Comments are welcome.
+
+	- Jaap Versteegh <j.r.versteegh@gmail.com>
